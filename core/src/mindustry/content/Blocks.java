@@ -140,7 +140,7 @@ public class Blocks{
 
     //units
     groundFactory, airFactory, navalFactory,
-    additiveReconstructor, multiplicativeReconstructor, exponentialReconstructor, tetrativeReconstructor,
+    additiveReconstructor, airReconstructor, groundReconstructor, navalReconstructor, multiplicativeReconstructor, exponentialReconstructor, tetrativeReconstructor,
     repairPoint, repairTurret,
 
     //units - erekir
@@ -5315,9 +5315,9 @@ public class Blocks{
         groundFactory = new UnitFactory("ground-factory"){{
             requirements(Category.units, with(Items.copper, 50, Items.lead, 120, Items.silicon, 80));
             plans = Seq.with(
-                new UnitPlan(UnitTypes.dagger, 60f * 15, with(Items.silicon, 10, Items.lead, 10)),
-                new UnitPlan(UnitTypes.crawler, 60f * 10, with(Items.silicon, 8, Items.coal, 10)),
-                new UnitPlan(UnitTypes.nova, 60f * 40, with(Items.silicon, 30, Items.lead, 20, Items.titanium, 20))
+                new UnitPlan(UnitTypes.dagger, 60f * 15, with(Items.silicon, 15, Items.lead, 10)),
+                new UnitPlan(UnitTypes.crawler, 60f * 10, with(Items.silicon, 10, Items.coal, 10)),
+                new UnitPlan(UnitTypes.nova, 60f * 15, with(Items.silicon, 15, Items.lead, 10, Items.titanium, 5))
             );
             size = 3;
             consumePower(1.2f);
@@ -5326,8 +5326,8 @@ public class Blocks{
         airFactory = new UnitFactory("air-factory"){{
             requirements(Category.units, with(Items.copper, 60, Items.lead, 70));
             plans = Seq.with(
-                new UnitPlan(UnitTypes.flare, 60f * 15, with(Items.silicon, 15)),
-                new UnitPlan(UnitTypes.mono, 60f * 35, with(Items.silicon, 30, Items.lead, 15))
+                new UnitPlan(UnitTypes.flare, 60f * 10, with(Items.silicon, 15)),
+                new UnitPlan(UnitTypes.mono, 60f * 20, with(Items.silicon, 30, Items.lead, 15))
             );
             size = 3;
             consumePower(1.2f);
@@ -5336,12 +5336,58 @@ public class Blocks{
         navalFactory = new UnitFactory("naval-factory"){{
             requirements(Category.units, with(Items.copper, 150, Items.lead, 130, Items.metaglass, 120));
             plans = Seq.with(
-                new UnitPlan(UnitTypes.risso, 60f * 45f, with(Items.silicon, 20, Items.metaglass, 35)),
-                new UnitPlan(UnitTypes.retusa, 60f * 50f, with(Items.silicon, 15, Items.metaglass, 25, Items.titanium, 20))
+                new UnitPlan(UnitTypes.risso, 60f * 45f, with(Items.silicon, 15, Items.metaglass, 15)),
+                new UnitPlan(UnitTypes.retusa, 60f * 20f, with(Items.silicon, 15, Items.metaglass, 25, Items.titanium, 10))
             );
             size = 3;
             consumePower(1.2f);
             floating = true;
+        }};
+
+       airReconstructor = new Reconstructor("air-reconstructor"){{
+            requirements(Category.units, with(Items.copper, 200, Items.lead, 120, Items.silicon, 60, Items.titanium, 80));
+
+            size = 3;
+            consumePower(2.75f);
+            consumeItems(with(Items.silicon, 25, Items.titanium, 10, Items.graphite, 25));
+
+            constructTime = 60f * 20f;
+
+            upgrades.addAll(
+                new UnitType[]{UnitTypes.flare, UnitTypes.horizon},
+                new UnitType[]{UnitTypes.mono, UnitTypes.poly}
+            );
+        }};
+
+       navalReconstructor = new Reconstructor("naval-reconstructor"){{
+            requirements(Category.units, with(Items.copper, 160, Items.lead, 80, Items.silicon, 60, Items.titanium, 50, Items.metaglass, 60));
+
+            size = 3;
+            consumePower(2.75f);
+            consumeItems(with(Items.silicon, 40, Items.titanium, 15, Items.graphite, 10));
+
+            constructTime = 60f * 20f;
+
+            upgrades.addAll(
+                new UnitType[]{UnitTypes.risso, UnitTypes.minke},
+                new UnitType[]{UnitTypes.retusa, UnitTypes.oxynoe}
+            );
+        }};
+
+       groundReconstructor = new Reconstructor("ground-reconstructor"){{
+            requirements(Category.units, with(Items.copper, 200, Items.lead, 160, Items.silicon, 80, Items.titanium, 60));
+
+            size = 3;
+            consumePower(4.125f);
+            consumeItems(with(Items.silicon, 25, Items.titanium, 10, Items.graphite, 25));
+
+            constructTime = 60f * 20f;
+
+            upgrades.addAll(
+                new UnitType[]{UnitTypes.nova, UnitTypes.pulsar},
+                new UnitType[]{UnitTypes.dagger, UnitTypes.mace},
+                new UnitType[]{UnitTypes.crawler, UnitTypes.atrax}
+            );
         }};
 
         additiveReconstructor = new Reconstructor("additive-reconstructor"){{

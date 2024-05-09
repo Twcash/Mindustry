@@ -5327,7 +5327,7 @@ public class Blocks{
             requirements(Category.units, with(Items.copper, 60, Items.lead, 70));
             plans = Seq.with(
                 new UnitPlan(UnitTypes.flare, 60f * 10, with(Items.silicon, 15)),
-                new UnitPlan(UnitTypes.mono, 60f * 20, with(Items.silicon, 30, Items.lead, 15))
+                new UnitPlan(UnitTypes.mono, 60f * 15, with(Items.silicon, 30, Items.lead, 15))
             );
             size = 3;
             consumePower(1.2f);
@@ -5336,7 +5336,7 @@ public class Blocks{
         navalFactory = new UnitFactory("naval-factory"){{
             requirements(Category.units, with(Items.copper, 150, Items.lead, 130, Items.metaglass, 120));
             plans = Seq.with(
-                new UnitPlan(UnitTypes.risso, 60f * 45f, with(Items.silicon, 15, Items.metaglass, 15)),
+                new UnitPlan(UnitTypes.risso, 60f * 15f, with(Items.silicon, 15, Items.metaglass, 20)),
                 new UnitPlan(UnitTypes.retusa, 60f * 20f, with(Items.silicon, 15, Items.metaglass, 25, Items.titanium, 10))
             );
             size = 3;
@@ -5351,7 +5351,7 @@ public class Blocks{
             consumePower(2.75f);
             consumeItems(with(Items.silicon, 25, Items.titanium, 10, Items.graphite, 25));
 
-            constructTime = 60f * 20f;
+            constructTime = 60f * 15f;
 
             upgrades.addAll(
                 new UnitType[]{UnitTypes.flare, UnitTypes.horizon},
@@ -5366,7 +5366,7 @@ public class Blocks{
             consumePower(2.75f);
             consumeItems(with(Items.silicon, 40, Items.titanium, 15, Items.graphite, 10));
 
-            constructTime = 60f * 20f;
+            constructTime = 60f * 25f;
 
             upgrades.addAll(
                 new UnitType[]{UnitTypes.risso, UnitTypes.minke},

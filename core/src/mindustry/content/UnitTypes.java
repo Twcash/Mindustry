@@ -312,7 +312,7 @@ public class UnitTypes{
                         lightningLength = 4;
                         lightningColor = Pal.surge;
                         //standard bullet damage is far too much for lightning
-                        lightningDamage = 10
+                        lightningDamage = 10;
                     }};
                 }};
             }}

@@ -145,6 +145,7 @@ public class UnitTypes{
                     status = StatusEffects.burning;
                     keepVelocity = false;
                     hittable = false;
+                    makeFire = true;
                 }};
             }});
         }};

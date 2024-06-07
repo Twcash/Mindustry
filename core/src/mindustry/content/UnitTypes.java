@@ -116,9 +116,9 @@ public class UnitTypes{
         }};
 
         mace = new UnitType("mace"){{
-            speed = 0.6f;
+            speed = 0.75f;
             hitSize = 10f;
-            health = 575;
+            health = 525;
             armor = 4f;
             ammoType = new ItemAmmoType(Items.coal);
 
@@ -128,10 +128,10 @@ public class UnitTypes{
                 top = false;
                 shootSound = Sounds.flame;
                 shootY = 2f;
-                reload = 12f;
+                reload = 14f;
                 recoil = 1f;
                 ejectEffect = Fx.none;
-                bullet = new BulletType(4.2f, 37f){{
+                bullet = new BulletType(4.2f, 25f){{
                     ammoMultiplier = 3f;
                     hitSize = 7f;
                     lifetime = 15f;

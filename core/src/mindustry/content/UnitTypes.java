@@ -98,27 +98,27 @@ public class UnitTypes{
         //region ground attack
 
         dagger = new UnitType("dagger"){{
-            speed = 0.5f;
+            speed = 0.65f;
             hitSize = 8f;
-            health = 150;
+            health = 175;
             weapons.add(new Weapon("large-weapon"){{
-                reload = 13f;
+                reload = 18f;
                 x = 4f;
                 y = 2f;
                 top = false;
                 ejectEffect = Fx.casing1;
-                bullet = new BasicBulletType(2.5f, 9){{
+                bullet = new BasicBulletType(2.5f, 12){{
                     width = 7f;
                     height = 9f;
-                    lifetime = 60f;
+                    lifetime = 40f;
                 }};
             }});
         }};
 
         mace = new UnitType("mace"){{
-            speed = 0.5f;
+            speed = 0.6f;
             hitSize = 10f;
-            health = 550;
+            health = 575;
             armor = 4f;
             ammoType = new ItemAmmoType(Items.coal);
 
@@ -128,17 +128,17 @@ public class UnitTypes{
                 top = false;
                 shootSound = Sounds.flame;
                 shootY = 2f;
-                reload = 11f;
+                reload = 12f;
                 recoil = 1f;
                 ejectEffect = Fx.none;
                 bullet = new BulletType(4.2f, 37f){{
                     ammoMultiplier = 3f;
                     hitSize = 7f;
-                    lifetime = 13f;
+                    lifetime = 15f;
                     pierce = true;
                     pierceBuilding = true;
-                    pierceCap = 2;
-                    statusDuration = 60f * 4;
+                    pierceCap = 3;
+                    statusDuration = 60f * 5;
                     shootEffect = Fx.shootSmallFlame;
                     hitEffect = Fx.hitFlameSmall;
                     despawnEffect = Fx.none;
@@ -150,12 +150,12 @@ public class UnitTypes{
         }};
 
         fortress = new UnitType("fortress"){{
-            speed = 0.43f;
+            speed = 0.5f;
             hitSize = 13f;
             rotateSpeed = 3f;
             targetAir = false;
-            health = 900;
-            armor = 9f;
+            health = 950;
+            armor = 8f;
             mechFrontSway = 0.55f;
             ammoType = new ItemAmmoType(Items.graphite);
 
@@ -163,7 +163,7 @@ public class UnitTypes{
                 top = false;
                 y = 1f;
                 x = 9f;
-                reload = 60f;
+                reload = 75f;
                 recoil = 4f;
                 shake = 2f;
                 ejectEffect = Fx.casing2;
@@ -175,8 +175,8 @@ public class UnitTypes{
                     width = height = 14f;
                     collides = true;
                     collidesTiles = true;
-                    splashDamageRadius = 35f;
-                    splashDamage = 80f;
+                    splashDamageRadius = 40f;
+                    splashDamage = 95f;
                     backColor = Pal.bulletYellowBack;
                     frontColor = Pal.bulletYellow;
                 }};
@@ -184,25 +184,25 @@ public class UnitTypes{
         }};
 
         scepter = new UnitType("scepter"){{
-            speed = 0.36f;
+            speed = 0.45f;
             hitSize = 22f;
             rotateSpeed = 2.1f;
-            health = 9000;
+            health = 9500;
             armor = 10f;
             mechFrontSway = 1f;
             ammoType = new ItemAmmoType(Items.thorium);
 
             mechStepParticles = true;
-            stepShake = 0.15f;
+            stepShake = 0.2f;
             singleTarget = true;
-            drownTimeMultiplier = 4f;
+            drownTimeMultiplier = 5f;
 
             abilities.add(new ShieldRegenFieldAbility(25f, 250f, 60f * 1, 60f));
 
             BulletType smallBullet = new BasicBulletType(3f, 10){{
                 width = 7f;
                 height = 9f;
-                lifetime = 50f;
+                lifetime = 65f;
             }};
 
             weapons.add(
@@ -211,31 +211,31 @@ public class UnitTypes{
                 y = 1f;
                 x = 16f;
                 shootY = 8f;
-                reload = 45f;
+                reload = 55f;
                 recoil = 5f;
                 shake = 2f;
                 ejectEffect = Fx.casing3;
                 shootSound = Sounds.bang;
-                inaccuracy = 3f;
+                inaccuracy = 5f;
 
-                shoot.shots = 3;
-                shoot.shotDelay = 4f;
+                shoot.shots = 5;
+                shoot.shotDelay = 3f;
 
                 bullet = new BasicBulletType(8f, 80){{
                     width = 11f;
                     height = 20f;
-                    lifetime = 27f;
+                    lifetime = 30f;
                     shootEffect = Fx.shootBig;
-                    lightning = 2;
-                    lightningLength = 6;
+                    lightning = 3;
+                    lightningLength = 4;
                     lightningColor = Pal.surge;
                     //standard bullet damage is far too much for lightning
-                    lightningDamage = 20;
+                    lightningDamage = 15;
                 }};
             }},
 
             new Weapon("mount-weapon"){{
-                reload = 13f;
+                reload = 10f;
                 x = 8.5f;
                 y = 6f;
                 rotate = true;
@@ -243,7 +243,7 @@ public class UnitTypes{
                 bullet = smallBullet;
             }},
             new Weapon("mount-weapon"){{
-                reload = 16f;
+                reload = 10f;
                 x = 8.5f;
                 y = -7f;
                 rotate = true;
@@ -254,13 +254,13 @@ public class UnitTypes{
         }};
 
         reign = new UnitType("reign"){{
-            speed = 0.4f;
+            speed = 0.45f;
             hitSize = 26f;
             rotateSpeed = 1.65f;
-            health = 24000;
-            armor = 18f;
+            health = 25000;
+            armor = 20f;
             mechStepParticles = true;
-            stepShake = 0.75f;
+            stepShake = 0.6f;
             drownTimeMultiplier = 6f;
             mechFrontSway = 1.9f;
             mechSideSway = 0.6f;
@@ -272,40 +272,47 @@ public class UnitTypes{
                 y = 1f;
                 x = 21.5f;
                 shootY = 11f;
-                reload = 9f;
+                reload = 35f;
                 recoil = 5f;
                 shake = 2f;
                 ejectEffect = Fx.casing4;
                 shootSound = Sounds.bang;
 
-                bullet = new BasicBulletType(13f, 80){{
+                shoot.shots = 3;
+                shoot.shotDelay = 3f;
+                bullet = new BasicBulletType(13f, 95){{
                     pierce = true;
                     pierceCap = 10;
                     width = 14f;
                     height = 33f;
-                    lifetime = 15f;
+                    lifetime = 20f;
                     shootEffect = Fx.shootBig;
                     fragVelocityMin = 0.4f;
 
                     hitEffect = Fx.blastExplosion;
                     splashDamage = 18f;
-                    splashDamageRadius = 13f;
+                    splashDamageRadius = 25f;
 
-                    fragBullets = 3;
+                    fragBullets = 2;
                     fragLifeMin = 0f;
                     fragRandomSpread = 30f;
 
-                    fragBullet = new BasicBulletType(9f, 20){{
+                    fragBullet = new BasicBulletType(9f, 5){{
                         width = 10f;
                         height = 10f;
                         pierce = true;
                         pierceBuilding = true;
                         pierceCap = 3;
-
                         lifetime = 20f;
+                        
                         hitEffect = Fx.flakExplosion;
                         splashDamage = 15f;
                         splashDamageRadius = 10f;
+                        lightning = 3;
+                        lightningLength = 4;
+                        lightningColor = Pal.surge;
+                        //standard bullet damage is far too much for lightning
+                        lightningDamage = 10
                     }};
                 }};
             }}

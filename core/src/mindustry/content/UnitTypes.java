@@ -358,12 +358,12 @@ public class UnitTypes{
 
         pulsar = new UnitType("pulsar"){{
             canBoost = true;
-            boostMultiplier = 1.6f;
-            speed = 0.7f;
+            boostMultiplier = 1.8f;
+            speed = 0.85f;
             hitSize = 11f;
-            health = 320f;
+            health = 410f;
             buildSpeed = 0.9f;
-            armor = 4f;
+            armor = 3f;
             riseSpeed = 0.07f;
 
             mineTier = 2;
@@ -379,8 +379,8 @@ public class UnitTypes{
                 y = 0.5f;
                 shootY = 2.5f;
 
-                reload = 36f;
-                inaccuracy = 35;
+                reload = 30f;
+                inaccuracy = 30;
 
                 shoot.shots = 3;
                 shoot.shotDelay = 0.5f;
@@ -391,8 +391,8 @@ public class UnitTypes{
 
                 bullet = new LightningBulletType(){{
                     lightningColor = hitColor = Pal.heal;
-                    damage = 14f;
-                    lightningLength = 7;
+                    damage = 8f;
+                    lightningLength = 9;
                     lightningLengthRand = 7;
                     shootEffect = Fx.shootHeal;
                     //Does not actually do anything; Just here to make stats work
@@ -403,7 +403,7 @@ public class UnitTypes{
                         hitEffect = Fx.hitLancer;
                         despawnEffect = Fx.none;
                         status = StatusEffects.shocked;
-                        statusDuration = 10f;
+                        statusDuration = 30f;
                         hittable = false;
                         healPercent = 1.6f;
                         collidesTeam = true;

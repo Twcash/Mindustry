@@ -187,8 +187,8 @@ public class UnitTypes{
         scepter = new UnitType("scepter"){{
             speed = 0.45f;
             hitSize = 22f;
-            rotateSpeed = 2.1f;
-            health = 9500;
+            rotateSpeed = 2.2f;
+            health = 9250;
             armor = 10f;
             mechFrontSway = 1f;
             ammoType = new ItemAmmoType(Items.thorium);
@@ -198,7 +198,7 @@ public class UnitTypes{
             singleTarget = true;
             drownTimeMultiplier = 5f;
 
-            abilities.add(new ShieldRegenFieldAbility(25f, 250f, 60f * 1, 60f));
+            abilities.add(new ShieldRegenFieldAbility(25f, 250f, 40f * 1, 60f));
 
             BulletType smallBullet = new BasicBulletType(3f, 10){{
                 width = 7f;
@@ -219,19 +219,18 @@ public class UnitTypes{
                 shootSound = Sounds.bang;
                 inaccuracy = 5f;
 
-                shoot.shots = 5;
+                shoot.shots = 6;
                 shoot.shotDelay = 3f;
 
-                bullet = new BasicBulletType(8f, 80){{
+                bullet = new BasicBulletType(8f, 45){{
                     width = 11f;
                     height = 20f;
                     lifetime = 30f;
                     shootEffect = Fx.shootBig;
-                    lightning = 3;
-                    lightningLength = 4;
-                    lightningColor = Pal.surge;
-                    //standard bullet damage is far too much for lightning
-                    lightningDamage = 15;
+                    pierceCap = 5;
+                    pierceBuilding = true;
+                    pierceDamageFactor = 0.75f;
+                    
                 }};
             }},
 

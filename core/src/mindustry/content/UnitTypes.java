@@ -227,6 +227,8 @@ public class UnitTypes{
                     height = 20f;
                     lifetime = 30f;
                     shootEffect = Fx.shootBig;
+
+                    pierce = true;
                     pierceCap = 5;
                     pierceBuilding = true;
                     pierceDamageFactor = 0.75f;

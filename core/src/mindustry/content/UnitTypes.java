@@ -212,26 +212,25 @@ public class UnitTypes{
                 y = 1f;
                 x = 16f;
                 shootY = 8f;
-                reload = 55f;
+                reload = 45f;
                 recoil = 5f;
                 shake = 2f;
                 ejectEffect = Fx.casing3;
                 shootSound = Sounds.bang;
-                inaccuracy = 5f;
+                inaccuracy = 6f;
 
-                shoot.shots = 6;
-                shoot.shotDelay = 3f;
+                shoot.shots = 4;
+                shoot.shotDelay = 5f;
 
-                bullet = new BasicBulletType(8f, 45){{
+                bullet = new BasicBulletType(8f, 60){{
                     width = 11f;
                     height = 20f;
-                    lifetime = 30f;
+                    lifetime = 35f;
                     shootEffect = Fx.shootBig;
 
                     pierce = true;
                     pierceCap = 5;
                     pierceBuilding = true;
-                    pierceDamageFactor = 0.75f;
                     
                 }};
             }},

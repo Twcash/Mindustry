@@ -188,8 +188,8 @@ public class UnitTypes{
             speed = 0.45f;
             hitSize = 22f;
             rotateSpeed = 2.2f;
-            health = 9250;
-            armor = 10f;
+            health = 9200;
+            armor = 8f;
             mechFrontSway = 1f;
             ammoType = new ItemAmmoType(Items.thorium);
 

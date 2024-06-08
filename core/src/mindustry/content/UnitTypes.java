@@ -225,7 +225,7 @@ public class UnitTypes{
                 bullet = new BasicBulletType(8f, 55){{
                     width = 11f;
                     height = 20f;
-                    lifetime = 35f;
+                    lifetime = 27f;
                     shootEffect = Fx.shootBig;
 
                     pierce = true;

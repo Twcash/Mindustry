@@ -222,7 +222,7 @@ public class UnitTypes{
                 shoot.shots = 3;
                 shoot.shotDelay = 5f;
 
-                bullet = new BasicBulletType(8f, 45){{
+                bullet = new BasicBulletType(8f, 55){{
                     width = 11f;
                     height = 20f;
                     lifetime = 35f;

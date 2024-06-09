@@ -331,8 +331,8 @@ public class UnitTypes{
             boostMultiplier = 1.5f;
             speed = 0.5f;
             hitSize = 8f;
-            health = 175f;
-            buildSpeed = 0.8f;
+            health = 180f;
+            buildSpeed = 0.7f;
             armor = 1f;
 
             abilities.add(new RepairFieldAbility(10f, 60f * 4, 60f));
@@ -341,15 +341,15 @@ public class UnitTypes{
             weapons.add(new Weapon("heal-weapon"){{
                 top = false;
                 shootY = 2f;
-                reload = 22f;
+                reload = 25f;
                 x = 4.5f;
                 alternate = false;
                 ejectEffect = Fx.none;
                 recoil = 2f;
                 shootSound = Sounds.lasershoot;
 
-                bullet = new LaserBoltBulletType(5.2f, 16){{
-                    lifetime = 35f;
+                bullet = new LaserBoltBulletType(5.2f, 25){{
+                    lifetime = 25f;
                     healPercent = 5f;
                     collidesTeam = true;
                     backColor = Pal.heal;

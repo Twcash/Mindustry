@@ -329,13 +329,13 @@ public class UnitTypes{
         nova = new UnitType("nova"){{
             canBoost = true;
             boostMultiplier = 1.5f;
-            speed = 0.5f;
+            speed = 0.45f;
             hitSize = 8f;
             health = 180f;
             buildSpeed = 0.7f;
             armor = 1f;
 
-            abilities.add(new RepairFieldAbility(10f, 60f * 4, 60f));
+            abilities.add(new RepairFieldAbility(15f, 60f * 4, 80f));
             ammoType = new PowerAmmoType(1000);
 
             weapons.add(new Weapon("heal-weapon"){{
@@ -348,8 +348,8 @@ public class UnitTypes{
                 recoil = 2f;
                 shootSound = Sounds.lasershoot;
 
-                bullet = new LaserBoltBulletType(5.2f, 25){{
-                    lifetime = 25f;
+                bullet = new LaserBoltBulletType(5.2f, 30){{
+                    lifetime = 15f;
                     healPercent = 5f;
                     collidesTeam = true;
                     backColor = Pal.heal;

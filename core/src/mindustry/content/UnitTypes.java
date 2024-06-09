@@ -349,7 +349,7 @@ public class UnitTypes{
                 shootSound = Sounds.lasershoot;
 
                 bullet = new LaserBoltBulletType(5.2f, 20){{
-                    lifetime = 15f;
+                    lifetime = 20f;
                     healPercent = 5f;
                     collidesTeam = true;
                     backColor = Pal.heal;

@@ -5418,10 +5418,10 @@ public class Blocks{
 
             size = 9;
             consumePower(15f);
-            consumeItems(with(Items.silicon, 780, Items.plastanium, 630, Items.surgeAlloy, 360, Items.phaseFabric, 150));
+            consumeItems(with(Items.silicon, 850, Items.plastanium, 750, Items.surgeAlloy, 360, Items.phaseFabric, 150));
             consumeLiquid(Liquids.cryofluid, 1.6f);
 
-            constructTime = 60f * 120f;
+            constructTime = 60f * 250f;
             liquidCapacity = 180f;
 
             upgrades.addAll(

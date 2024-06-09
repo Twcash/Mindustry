@@ -151,7 +151,7 @@ public class UnitTypes{
         }};
 
         fortress = new UnitType("fortress"){{
-            speed = 0.5f;
+            speed = 0.55f;
             hitSize = 13f;
             rotateSpeed = 3f;
             targetAir = false;
@@ -164,20 +164,20 @@ public class UnitTypes{
                 top = false;
                 y = 1f;
                 x = 9f;
-                reload = 75f;
+                reload = 60f;
                 recoil = 4f;
                 shake = 2f;
                 ejectEffect = Fx.casing2;
                 shootSound = Sounds.artillery;
                 bullet = new ArtilleryBulletType(2f, 20, "shell"){{
                     hitEffect = Fx.blastExplosion;
-                    knockback = 0.8f;
-                    lifetime = 120f;
+                    knockback = 1.2f;
+                    lifetime = 110f;
                     width = height = 14f;
                     collides = true;
                     collidesTiles = true;
-                    splashDamageRadius = 40f;
-                    splashDamage = 95f;
+                    splashDamageRadius = 25f;
+                    splashDamage = 110f;
                     backColor = Pal.bulletYellowBack;
                     frontColor = Pal.bulletYellow;
                 }};

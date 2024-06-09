@@ -164,7 +164,7 @@ public class UnitTypes{
                 top = false;
                 y = 1f;
                 x = 9f;
-                reload = 60f;
+                reload = 35f;
                 recoil = 4f;
                 shake = 2f;
                 ejectEffect = Fx.casing2;

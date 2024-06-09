@@ -5442,7 +5442,7 @@ public class Blocks{
 
             size = 7;
             consumePower(10f);
-            consumeItems(with(Items.silicon, 570, Items.titanium, 550, Items.plastanium, 450));
+            consumeItems(with(Items.silicon, 580, Items.titanium, 550, Items.plastanium, 420));
             consumeLiquid(Liquids.cryofluid, 0.6f);
 
             constructTime = 60f * 60f;
@@ -5464,7 +5464,7 @@ public class Blocks{
 
             size = 9;
             consumePower(15f);
-            consumeItems(with(Items.silicon, 800, Items.plastanium, 450, Items.surgeAlloy, 250, Items.phaseFabric, 150));
+            consumeItems(with(Items.silicon, 780, Items.plastanium, 580Items.surgeAlloy, 400, Items.phaseFabric, 150));
             consumeLiquid(Liquids.cryofluid, 1.6f);
 
             constructTime = 60f * 90f;

@@ -5424,7 +5424,7 @@ public class Blocks{
             consumePower(6f);
             consumeItems(with(Items.silicon, 130, Items.titanium, 80, Items.metaglass, 40));
 
-            constructTime = 60f * 30f;
+            constructTime = 60f * 60f;
 
             upgrades.addAll(
                 new UnitType[]{UnitTypes.horizon, UnitTypes.zenith},
@@ -5467,7 +5467,7 @@ public class Blocks{
             consumeItems(with(Items.silicon, 780, Items.plastanium, 630, Items.surgeAlloy, 360, Items.phaseFabric, 150));
             consumeLiquid(Liquids.cryofluid, 1.6f);
 
-            constructTime = 60f * 90f;
+            constructTime = 60f * 120f;
             liquidCapacity = 180f;
 
             upgrades.addAll(

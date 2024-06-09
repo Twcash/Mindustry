@@ -100,9 +100,9 @@ public class UnitTypes{
         dagger = new UnitType("dagger"){{
             speed = 0.65f;
             hitSize = 8f;
-            health = 175;
+            health = 150;
             weapons.add(new Weapon("large-weapon"){{
-                reload = 18f;
+                reload = 16f;
                 x = 4f;
                 y = 2f;
                 top = false;
@@ -329,9 +329,9 @@ public class UnitTypes{
         nova = new UnitType("nova"){{
             canBoost = true;
             boostMultiplier = 1.5f;
-            speed = 0.55f;
+            speed = 0.5f;
             hitSize = 8f;
-            health = 120f;
+            health = 175f;
             buildSpeed = 0.8f;
             armor = 1f;
 
@@ -341,15 +341,15 @@ public class UnitTypes{
             weapons.add(new Weapon("heal-weapon"){{
                 top = false;
                 shootY = 2f;
-                reload = 24f;
+                reload = 22f;
                 x = 4.5f;
                 alternate = false;
                 ejectEffect = Fx.none;
                 recoil = 2f;
                 shootSound = Sounds.lasershoot;
 
-                bullet = new LaserBoltBulletType(5.2f, 13){{
-                    lifetime = 30f;
+                bullet = new LaserBoltBulletType(5.2f, 16){{
+                    lifetime = 35f;
                     healPercent = 5f;
                     collidesTeam = true;
                     backColor = Pal.heal;

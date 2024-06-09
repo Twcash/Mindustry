@@ -5464,7 +5464,7 @@ public class Blocks{
 
             size = 9;
             consumePower(15f);
-            consumeItems(with(Items.silicon, 750, Items.plastanium, 350, Items.surgeAlloy, 150, Items.phaseFabric, 100));
+            consumeItems(with(Items.silicon, 800, Items.plastanium, 450, Items.surgeAlloy, 250, Items.phaseFabric, 200));
             consumeLiquid(Liquids.cryofluid, 1.6f);
 
             constructTime = 60f * 90f;

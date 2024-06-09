@@ -5351,58 +5351,12 @@ public class Blocks{
             floating = true;
         }};
 
-       airReconstructor = new Reconstructor("air-reconstructor"){{
-            requirements(Category.units, with(Items.copper, 200, Items.lead, 120, Items.silicon, 60, Items.titanium, 80));
-
-            size = 3;
-            consumePower(2.75f);
-            consumeItems(with(Items.silicon, 25, Items.titanium, 10, Items.graphite, 25));
-
-            constructTime = 60f * 15f;
-
-            upgrades.addAll(
-                new UnitType[]{UnitTypes.flare, UnitTypes.horizon},
-                new UnitType[]{UnitTypes.mono, UnitTypes.poly}
-            );
-        }};
-
-       navalReconstructor = new Reconstructor("naval-reconstructor"){{
-            requirements(Category.units, with(Items.copper, 160, Items.lead, 80, Items.silicon, 60, Items.titanium, 50, Items.metaglass, 60));
-
-            size = 3;
-            consumePower(2.75f);
-            consumeItems(with(Items.silicon, 40, Items.titanium, 15, Items.graphite, 10));
-
-            constructTime = 60f * 25f;
-
-            upgrades.addAll(
-                new UnitType[]{UnitTypes.risso, UnitTypes.minke},
-                new UnitType[]{UnitTypes.retusa, UnitTypes.oxynoe}
-            );
-        }};
-
-       groundReconstructor = new Reconstructor("ground-reconstructor"){{
-            requirements(Category.units, with(Items.copper, 200, Items.lead, 160, Items.silicon, 80, Items.titanium, 60));
-
-            size = 3;
-            consumePower(4.125f);
-            consumeItems(with(Items.silicon, 25, Items.titanium, 10, Items.graphite, 25));
-
-            constructTime = 60f * 20f;
-
-            upgrades.addAll(
-                new UnitType[]{UnitTypes.nova, UnitTypes.pulsar},
-                new UnitType[]{UnitTypes.dagger, UnitTypes.mace},
-                new UnitType[]{UnitTypes.crawler, UnitTypes.atrax}
-            );
-        }};
-
         additiveReconstructor = new Reconstructor("additive-reconstructor"){{
             requirements(Category.units, with(Items.copper, 200, Items.lead, 120, Items.silicon, 90));
 
             size = 3;
             consumePower(3f);
-            consumeItems(with(Items.silicon, 40, Items.graphite, 40));
+            consumeItems(with(Items.silicon, 35, Items.titanium, 15 ));
 
             constructTime = 60f * 10f;
 

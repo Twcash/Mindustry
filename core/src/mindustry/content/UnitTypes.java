@@ -348,7 +348,7 @@ public class UnitTypes{
                 recoil = 2f;
                 shootSound = Sounds.lasershoot;
 
-                bullet = new LaserBoltBulletType(5.2f, 30){{
+                bullet = new LaserBoltBulletType(5.2f, 20){{
                     lifetime = 15f;
                     healPercent = 5f;
                     collidesTeam = true;

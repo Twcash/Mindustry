@@ -1,5 +1,6 @@
 package mindustry.world.blocks.environment;
 
+import arc.graphics.Color;
 import arc.graphics.g2d.*;
 import arc.util.*;
 import mindustry.annotations.Annotations.*;
@@ -18,16 +19,16 @@ public class Cliff extends Block{
         fillsTile = false;
         hasShadow = false;
     }
-
     @Override
     public void drawBase(Tile tile){
-        Draw.color(Tmp.c1.set(tile.floor().mapColor).mul(1.6f));
-        Draw.rect(cliffs[tile.data & 0xff], tile.worldx(), tile.worldy());
+        int idx = tile.data & 0xff;
+        Draw.color(Tmp.c1.set(tile.floor().mapColor).mul(1.4f));
+        Draw.rect(cliffs[idx], tile.worldx(), tile.worldy());
         Draw.color();
     }
 
-    @Override
+   @Override
     public int minimapColor(Tile tile){
-        return Tmp.c1.set(tile.floor().mapColor).mul(1.2f).rgba();
+        return Tmp.c1.set(tile.floor().mapColor).mul(0.85f).rgba();
     }
 }

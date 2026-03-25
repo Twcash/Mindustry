@@ -81,7 +81,7 @@ public class UnitTypes{
     public static @EntityDef({Unitc.class, BuildingTetherc.class, Payloadc.class}) UnitType manifold, assemblyDrone;
 
     //tank
-    public static @EntityDef({Unitc.class, Tankc.class}) UnitType stell, locus, precept, vanquish, conquer;
+    public static @EntityDef({Unitc.class, Tankc.class}) UnitType stell, locus, precept, vanquish, conquer, test1;
 
     //endregion
 
@@ -445,7 +445,21 @@ public class UnitTypes{
                 }};
             }});
         }};
+        test1 = new UnitType("test1"){{
+            hitSize = 12f;
+            treadPullOffset = 3;
+            speed = 0.75f;
+            rotateSpeed = 3.8f;
+            health = 750;
+            armor = 4f;
+            itemCapacity = 0;
+            floorMultiplier = 0.95f;
+            researchCostMultiplier = 0f;
+            abilities.add(new ForceFieldAbility(30f, 0.25f, 300, 60f * 4));
 
+            tankMoveVolume *= 0.32f;
+            tankMoveSound = Sounds.tankMoveSmall;
+        }};
         quasar = new UnitType("quasar"){{
             mineTier = 3;
             boostMultiplier = 2f;
